@@ -32,7 +32,7 @@ type Config struct {
 	AfterLoginURL        *url.URL `split_words:"true"`
 	AfterLogoutURL       *url.URL `split_words:"true"`
 	VerifyAuthURL        *url.URL `split_words:"true"`
-	LogLevel             string   `split_words:"true" default:"INFO"`
+	LogLevel             string   `split_words:"true" default:"INFO" envconfig:"LOG_LEVEL"`
 
 	// Identity Headers
 	UserIDHeader      string            `split_words:"true" default:"kubeflow-userid" envconfig:"USERID_HEADER"`
